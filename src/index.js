@@ -68,28 +68,24 @@ function getForecast(city)  {
   }
 
 function displayForecast(response) {
-    console.log(response.data);
+    let forecastHtml = "";
 
-    function displayForecast(response) {
-  let forecastHtml = "";
-
-  response.data.daily.forEach(function (day, index) {
+    response.data.daily.forEach(function (day, index) {
     if (index < 6) {
       forecastHtml =
         forecastHtml +
         `
-  
-        <div class="weather-forecast-day">
+         <div class="weather-forecast-day">
           <div class="weather-forecast-date">${formatDay(day.time)}</div>
 
           <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
           <div class="weather-forecast-temperatures">
             <div class="weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}º</strong>
+            <strong>${Math.round(day.temperature.maximum)}°</strong>
             </div>
             <div class="weather-forecast-temperature">${Math.round(
               day.temperature.minimum
-            )}º</div>
+            )}°</div>
           </div>
         </div>
       `;
@@ -105,4 +101,3 @@ function displayForecast(response) {
     searchFormElement.addEventListener("submit", handleSearchSuubmit);
   
     searchCity("Bandung");
-    displayForecast();
