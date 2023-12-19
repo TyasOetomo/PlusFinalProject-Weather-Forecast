@@ -32,6 +32,8 @@ body {
     padding: 30px;
   }
 
+ 
+
   .search-form-input {
     background-color: #f9f7fe;
     border: none;
@@ -51,6 +53,7 @@ body {
     color: white;
   }
 
+ 
   .weather-app-data {
     display: flex;
     justify-content: space-between;
@@ -82,21 +85,6 @@ body {
     height: 88px;
   }
   
-  .icon{
-    font-size: 50px;
- }
- 
- .unit{
- margin-top: 20px;
- font-size: 25px;
- }
- 
- .time{
-     font-weight: 600;
-     font-size: 20px;
-     color: rgba(0, 0, 0, 0.6);
-     margin: 0;
- }
   .weather-app-temperature {
     font-size: 88px;
     line-height: 88px;
