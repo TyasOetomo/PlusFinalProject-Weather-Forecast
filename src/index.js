@@ -104,3 +104,4 @@ function displayForecast(response) {
     searchFormElement.addEventListener("submit", handleSearchSuubmit);
   
     searchCity("Bandung");
+    displayForecast();
