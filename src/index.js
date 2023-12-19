@@ -81,15 +81,13 @@ function displayForecast(response) {
          <div class="weather-forecast-icon">🌤️</div>
           <div class="weather-forecast-temperatures">
             <div class="weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}°</strong>
+            <strong>15°</strong>
             </div>
-            <div class="weather-forecast-temperature">${Math.round(
-              day.temperature.minimum
-            )}°</div>
+            <div class="weather-forecast-temperature">19°</div>
           </div>
         </div>
       `;
-          });
+    });
   
     let forecastElement = document.querySelector("#forecast");
     forecastElement.innerHTML = forecastHtml;
