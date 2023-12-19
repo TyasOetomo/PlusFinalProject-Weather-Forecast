@@ -77,27 +77,24 @@ function displayForecast(response) {
         forecastHtml +
         `
          <div class="weather-forecast-day">
-          <div class="weather-forecast-date">${formatDay(day.time)}</div>
-         <div class="weather-forecast-icon"></div>
-          <div class="weather-forecast-temperatures">
-            <div class="weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}°</strong>
-            </div>
-            <div class="weather-forecast-temperature">${Math.round(
-              day.temperature.minimum
-            )}°</div>
-          </div>
-        </div>
-      `;
-          });
-  
-    let forecastElement = document.querySelector("#forecast");
-    forecastElement.innerHTML = forecastHtml;
-  }
+          <div class="weather-forecast-date">${day}</div>
+         <div class="weather-forecast-icon">🌤️</div>
+         <div class="weather-forecast-temperatures">
+         <div class="weather-forecast-temperature">
+           <strong>15º</strong>
+         </div>
+         <div class="weather-forecast-temperature">9º</div>
+       </div>
+     </div>
+   `;
+ });
 
+ let forecastElement = document.querySelector("#forecast");
+ forecastElement.innerHTML = forecastHtml;
+}
 
-    let searchFormElement = document.querySelector("#search-form");
-    searchFormElement.addEventListener("submit", handleSearchSuubmit);
-  
-    searchCity("Bandung");
-    displayForecast();
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Bandung");
+displayForecast();
