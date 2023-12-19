@@ -92,7 +92,7 @@ function getForecast(city)  {
     });
     
   
-    let forecastElement = document.querySelector("#forecast");
+    let forecastElement = document.querySelector("#weather-forecast");
     forecastElement.innerHTML = forecastHtml;
   }
 
